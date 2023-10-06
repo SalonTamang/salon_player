@@ -1,0 +1,463 @@
+{
+  "id": "566c2bb2-e89a-481c-9114-77cbd72acbf2",
+  "version": "2.0",
+  "name": "salon player",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "3ec16dd7-b9b7-486e-b418-2b5e0bfa33ef",
+    "name": "Checking music adding functionality",
+    "commands": [{
+      "id": "e60a400f-d006-4263-8dd9-6688826cf2b0",
+      "comment": "",
+      "command": "open",
+      "target": "/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97fdb1bb-eb32-4736-8c6d-ef7e9dd3772e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00bb9cbf-e3fd-4439-995a-098dd64dfff8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\31 > img",
+      "targets": [
+        ["css=#\\31 > img", "css:finder"],
+        ["xpath=//img[@alt='Single']", "xpath:img"],
+        ["xpath=//div[@id='1']/img", "xpath:idRelative"],
+        ["xpath=//div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bce4fce9-dd88-4694-8187-cac64a780b5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.music_details:nth-child(3) > .music_title",
+      "targets": [
+        ["css=.music_details:nth-child(3) > .music_title", "css:finder"],
+        ["xpath=//div[@id='list']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ecceca1-08e6-4ced-ae3c-0e696edf8980",
+      "comment": "",
+      "command": "click",
+      "target": "id=play",
+      "targets": [
+        ["id=play", "id"],
+        ["css=#play", "css:finder"],
+        ["xpath=//span[@id='play']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'pause_circle')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "265aeb33-80ec-42f7-9722-3f583e106dee",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=just added",
+      "targets": [
+        ["linkText=just added", "linkText"],
+        ["css=#playlist > .nav-link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'just added')]", "xpath:link"],
+        ["xpath=//ul[@id='playlist']/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//div[5]/ul/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'just added')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb48dcd7-af0b-465d-8076-98eba2f0b2b4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=goffy songs",
+      "targets": [
+        ["linkText=goffy songs", "linkText"],
+        ["css=#playlist > .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'goffy songs')]", "xpath:link"],
+        ["xpath=//ul[@id='playlist']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div[5]/ul/a", "xpath:position"],
+        ["xpath=//a[contains(.,'goffy songs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee4e5f51-9b17-4125-8384-c9bd240d03e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item span",
+      "targets": [
+        ["css=.nav-item span", "css:finder"],
+        ["xpath=//div[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create playlist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ca518ee-c272-4121-a55a-c977437fcac9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(3)",
+      "targets": [
+        ["css=button:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='removeShowPlaylist()']", "xpath:attributes"],
+        ["xpath=//div[@id='input-playlist']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Cancel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a994f14e-9e08-4fb7-a399-18589b9afff6",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul > .nav-link:nth-child(1) > span",
+      "targets": [
+        ["css=ul > .nav-link:nth-child(1) > span", "css:finder"],
+        ["xpath=//ul/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Recently played')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e92080f-638c-4f21-a9c6-865dafd7ef59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-link:nth-child(2) > span",
+      "targets": [
+        ["css=.nav-link:nth-child(2) > span", "css:finder"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'My favorites')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10549541-8efa-4c98-bb3c-e983ac174925",
+      "comment": "",
+      "command": "click",
+      "target": "css=.register",
+      "targets": [
+        ["css=.register", "css:finder"],
+        ["xpath=//button[@onclick='addSong()']", "xpath:attributes"],
+        ["xpath=//div[@id='profileBox']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add song')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76d3a9e5-c590-4714-856c-5fffb4f11727",
+      "comment": "",
+      "command": "click",
+      "target": "id=last",
+      "targets": [
+        ["id=last", "id"],
+        ["css=#last", "css:finder"],
+        ["xpath=//button[@id='last']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93e6735c-afa5-42b3-b34b-95038663a81d",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=#login > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbfd4d88-3a92-4359-8c9d-901558171896",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=#login > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "asdkjf"
+    }, {
+      "id": "b8d9aeff-6215-423a-a63d-667154045e6e",
+      "comment": "",
+      "command": "click",
+      "target": "name=album",
+      "targets": [
+        ["name=album", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='album']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4cdd1a4-f959-457c-ada0-4c37883db2ca",
+      "comment": "",
+      "command": "type",
+      "target": "name=album",
+      "targets": [
+        ["name=album", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='album']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "faksjd"
+    }, {
+      "id": "330b1900-9820-45c9-8015-bad558db2630",
+      "comment": "",
+      "command": "click",
+      "target": "name=artist",
+      "targets": [
+        ["name=artist", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='artist']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "faf3e349-0477-4b24-a591-a9a13fe946b9",
+      "comment": "",
+      "command": "type",
+      "target": "name=artist",
+      "targets": [
+        ["name=artist", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='artist']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "asdfkj"
+    }, {
+      "id": "9c6eae3f-8ac8-404d-936c-398f92ef05f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=image",
+      "targets": [
+        ["id=image", "id"],
+        ["name=image", "name"],
+        ["css=#image", "css:finder"],
+        ["xpath=//input[@id='image']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c49c65a5-53de-477f-bc23-99a4557580c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=image",
+      "targets": [
+        ["id=image", "id"],
+        ["name=image", "name"],
+        ["css=#image", "css:finder"],
+        ["xpath=//input[@id='image']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\ek-din-pyaar-tadipaar-2k20.mp3"
+    }, {
+      "id": "e8aa7fad-aece-4056-9ba4-96463660e889",
+      "comment": "",
+      "command": "click",
+      "target": "id=last",
+      "targets": [
+        ["id=last", "id"],
+        ["css=#last", "css:finder"],
+        ["xpath=//button[@id='last']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24c14ede-9634-48c9-b8b9-ae63df6b9f35",
+      "comment": "",
+      "command": "click",
+      "target": "id=audio",
+      "targets": [
+        ["id=audio", "id"],
+        ["name=audio", "name"],
+        ["css=#audio", "css:finder"],
+        ["xpath=//input[@id='audio']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2380dec9-172b-4479-bc0e-7dff88e52bb1",
+      "comment": "",
+      "command": "type",
+      "target": "id=audio",
+      "targets": [
+        ["id=audio", "id"],
+        ["name=audio", "name"],
+        ["css=#audio", "css:finder"],
+        ["xpath=//input[@id='audio']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\IPv4 Address Subnetting.docx"
+    }, {
+      "id": "d58d0e38-65db-4d17-aa18-e6a5de026ceb",
+      "comment": "",
+      "command": "click",
+      "target": "id=last",
+      "targets": [
+        ["id=last", "id"],
+        ["css=#last", "css:finder"],
+        ["xpath=//button[@id='last']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "300219c3-d08f-4232-b585-cd4ad59daf42",
+      "comment": "",
+      "command": "click",
+      "target": "id=image",
+      "targets": [
+        ["id=image", "id"],
+        ["name=image", "name"],
+        ["css=#image", "css:finder"],
+        ["xpath=//input[@id='image']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d2f2655-36e9-4e13-9b64-08740ffc1dd0",
+      "comment": "",
+      "command": "type",
+      "target": "id=image",
+      "targets": [
+        ["id=image", "id"],
+        ["name=image", "name"],
+        ["css=#image", "css:finder"],
+        ["xpath=//input[@id='image']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\Screenshot (2).png"
+    }, {
+      "id": "6f9e3562-3174-4fdd-b256-84767fc00373",
+      "comment": "",
+      "command": "click",
+      "target": "id=audio",
+      "targets": [
+        ["id=audio", "id"],
+        ["name=audio", "name"],
+        ["css=#audio", "css:finder"],
+        ["xpath=//input[@id='audio']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d2bcfbc-3866-4a04-8c95-f1009e21ac5d",
+      "comment": "",
+      "command": "type",
+      "target": "id=audio",
+      "targets": [
+        ["id=audio", "id"],
+        ["name=audio", "name"],
+        ["css=#audio", "css:finder"],
+        ["xpath=//input[@id='audio']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\ek-din-pyaar-tadipaar-2k20.mp3"
+    }, {
+      "id": "81f24d63-0106-40ac-93af-a0df396635d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=last",
+      "targets": [
+        ["id=last", "id"],
+        ["css=#last", "css:finder"],
+        ["xpath=//button[@id='last']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f2a9ad2-ab89-4e75-bcb7-76c5be6be784",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > .nav-link > span",
+      "targets": [
+        ["css=div:nth-child(2) > .nav-link > span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Browse')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d8ac00a-537d-4cbb-9460-a037c65a860f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='8']/div/span",
+      "targets": [
+        ["xpath=//div[@id='8']/div/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'asdfkj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53bf6af3-2151-4c7b-8e3d-71a9c1e7a811",
+      "comment": "",
+      "command": "click",
+      "target": "css=.music_details:nth-child(3) > .artist_name",
+      "targets": [
+        ["css=.music_details:nth-child(3) > .artist_name", "css:finder"],
+        ["xpath=//div[@id='list']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "418be2b0-add2-44ee-bcda-cf5dd467151c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wrapper",
+      "targets": [
+        ["css=.wrapper", "css:finder"],
+        ["xpath=//div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5337d80-6eaa-465b-949b-e474bb5d93ee",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b870505e-c2ff-4d29-a07b-99d47d7a6130",
+      "comment": "",
+      "command": "click",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "bed7f856-c9dc-4980-a3cc-414d1a0244e4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3ec16dd7-b9b7-486e-b418-2b5e0bfa33ef"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

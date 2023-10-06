@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css   ">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Salon Player</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <!-- side navigation bar of the page -->
+        <div class="sideNavBar">
+            <ul>
+                <div class="logo">
+                    <a class="nav-link" href="#">Salon Player</a>
+                </div>
+                <div>
+                    <a class="nav-link" onclick="displayAll()"><img src="images/browse.png" alt="browse"><span>Browse</span></a>
+                </div>
+                <!-- my music section for each users -->
+                <div>
+                    <span class="nav-link"><img src="images/music.png" alt="music">My music</span>
+                    <ul>
+                        <a class="nav-link" onclick="displayRecentlyPlayed()"><img src="images/recent.png" alt="browse"><span>Recently played</span></a>
+                        <a class="nav-link" onclick="displayFavorites()"><img src="images/heart.png" alt="browse"><span>My favorites</span></a>
+                    </ul>
+                </div>
+                <div class="separator">
+                    <hr>
+                </div>
+                <!-- playlist section -->
+                <div class="nav-item">
+                    <a class="nav-link" onclick="return showAddPlaylist()"><img src="images/plus.png" alt="playlist"><span>Create playlist</span></a>
+                    <div id="input-playlist" class="hide">
+                        <input id="pName" style="padding:5px;border:none;border-radius:3px;outline:none;margin-bottom:5px;" type="text" placeholder="Playlist Name">
+                        <button style="padding:5px;border:none;border-radius:3px;outline:none;margin-bottom:5px;cursor: pointer;" onclick="addPlaylist()">Create</button>
+                        <button style="padding:5px;border:none;border-radius:3px;outline:none;margin-bottom:5px;cursor: pointer;" onclick="removeShowPlaylist()">Cancel</button>
+                    </div>
+                    <ul id="playlist">
+                        <a class="nav-link" href="#">goffy songs</a>
+                        <a class="nav-link" href="#">just added</a>
+                    </ul>    
+                </div>
+                <div class="last-item">
+                    <span class="disabled" tabindex="-1" aria-disabled="true">&copy salon player</span>
+                </div>
+            </ul>
+        </div>
+
+        <!-- main content and nav bar of the page -->
+        <div class="contentBox">
+            <div class="mainNavBar">
+                <!-- search box html -->
+                <div class="searchBox">
+                    <input type="text" name="search" id="search" max-length="300" placeholder="What music do you want to listen to?"></input>
+                </div>
+                <!-- profile / registration button -->
+                <div class="profileBox" id="profileBox">
+                    <button class="register" onclick="addSong()">Add song</button>
+                </div>
+            </div>
+            <!-- browse popular and new albums randomly sorted from the database -->
+            <div class="mainContent">
+                <div class="contentHeader">
+                    <h2>
+                        Browse Channels
+                    </h2>
+                </div>
+                <div class="files">
+                    <div class="album">
+                        <img src="images/mc stan.png" alt="album_name">
+                        <div class="artist">
+                            <span >MC STAN</span>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <img src="images/central cee.jpg" alt="album_name">
+                        <div class="artist">
+                            <span >Central Cee</span>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <img src="images/t1.jpg" alt="album_name">
+                        <div class="artist">
+                            <span >Tribal Rain</span>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <img src="images/c2.jpg" alt="album_name">
+                        <div class="artist">
+                            <span >Central Cee</span>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <img src="images/c3.jpg" alt="album_name">
+                        <div class="artist">
+                            <span >Central Cee</span>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <img src="images/mc stan.png" alt="album_name">
+                        <div class="artist">
+                            <span >MC STAN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- popular section -->
+                <div class="contentHeader">
+                    <h2>
+                        Popular
+                    </h2>
+                </div>
+
+                <div class="files">
+                    <div class="records">
+                        <img src="images/central cee.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Central Cee</p>
+                        </div>
+                    </div>
+                    <div class="records">
+                        <img src="images/c2.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Central Cee</p>
+                        </div>
+                    </div>
+                    <div class="records">
+                        <img src="images/c3.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Central Cee</p>
+                        </div>
+                    </div>
+                    <div class="records">
+                        <img src="images/t1.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Tribal Rain</p>
+                        </div>
+                    </div>
+                    <div class="records">
+                        <img src="images/mc stan.png" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>MC STAN</p>
+                        </div>
+                    </div>
+                    
+                    <div class="records">
+                        <img src="images/central cee.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Central Cee</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- new releases -->
+                <div class="contentHeader">
+                    <h2>
+                        New releases
+                    </h2>
+                </div>
+
+                <div class="files">
+                    <div class="records">
+                        <img src="images/c2.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Central Cee</p>
+                        </div>
+                    </div>
+                    <div class="records">
+                        <img src="images/c3.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Central Cee</p>
+                        </div>
+                    </div>
+                    <div class="records">
+                        <img src="images/central cee.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Central Cee</p>
+                        </div>
+                    </div>
+                    <div class="records">
+                        <img src="images/mc stan.png" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>MC STAN</p>
+                        </div>
+                    </div>
+                    <div class="records">
+                        <img src="images/t1.jpg" alt="album">
+                        <div class="artist">
+                            <p>Album name</p>
+                            <p>Tribal Rain</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="contentHeader">
+                    <h2>
+                        Favorites
+                    </h2>
+                </div>
+
+                <div class="wrapper">
+                    <div class="favHeader">
+                        <div class="headFirst">
+                            <span>#</span>
+                            <span>Title</span>
+                        </div>
+                        <div class="headLast">
+                            <img src="images/feature.png" alt="minutes">
+                        </div>
+                    </div>
+                    <div class="separator">
+                        <hr>
+                    </div>
+                    <div id="listContainer">
+                        <div id="list">
+                            <div class="listTitle">
+                                <span>1. </span>
+
+                                <div class="titleWrapper">
+                                    <div class="title_image">
+                                        <img src="images/mc stan.png" alt="music_img">
+                                    </div>
+                                </div>
+                                <div class="music_details">
+                                    <div class="music_title">
+                                        <span>hey</span>
+                                    </div>
+                                    <div class="artist_name">
+                                        <span>hey</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- adding to playlist and favorite button -->
+                            <div class="feature">
+                                <div class="likeImage" onclick="addToFav(event)">
+                                    <span class="material-symbols-rounded" id="like_button">favorite</span>
+                                </div>
+                                <div class="playlistImage">
+                                    <span class="material-symbols-rounded" id="add_button">add</span>
+                                </div>    
+                            </div>
+                        </div>
+                        <div id="list">
+                            <div class="listTitle">
+                                <span>1. </span>
+
+                                <div class="titleWrapper">
+                                    <div class="title_image">
+                                        <img src="images/mc stan.png" alt="music_img">
+                                    </div>
+                                </div>
+                                <div class="music_details">
+                                    <div class="music_title">
+                                        <span>hey</span>
+                                    </div>
+                                    <div class="artist_name">
+                                        <span>hey</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- adding to playlist and favorite button -->
+                            <div class="feature">
+                                <div class="likeImage" onclick="addToFav(event)">
+                                    <span class="material-symbols-rounded" id="like_button">favorite</span>
+                                </div>
+                                <div class="playlistImage">
+                                    <span class="material-symbols-rounded" id="add_button">add</span>
+                                </div>    
+                            </div>
+                        </div>
+                        <div id="list">
+                            <div class="listTitle">
+                                <span>1. </span>
+
+                                <div class="titleWrapper">
+                                    <div class="title_image">
+                                        <img src="images/mc stan.png" alt="music_img">
+                                    </div>
+                                </div>
+                                <div class="music_details">
+                                    <div class="music_title">
+                                        <span>hey</span>
+                                    </div>
+                                    <div class="artist_name">
+                                        <span>hey</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- adding to playlist and favorite button -->
+                            <div class="feature">
+                                <div class="likeImage" onclick="addToFav(event)">
+                                    <span class="material-symbols-rounded" id="like_button">favorite</span>
+                                </div>
+                                <div class="playlistImage">
+                                    <span class="material-symbols-rounded" id="add_button">add</span>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>        
+    </div>
+  
+
+    <!-- container for music player -->
+    <div class="musicContainer">
+        <div class="imageWrapper">
+            <div class="music_image">
+            </div>
+        </div>
+        <div class="music_details">
+            <div class="music_title">
+                <marquee behavior="alternate" scrolldelay="550" class="track"></marquee>
+            </div>
+            <div class="artist_name">
+                <marquee behavior="alternate" scrolldelay="550" class="singer"></marquee>
+            </div>
+        </div>
+        
+        <!-- adding to playlist and favorite button -->
+        <div class="addToList">
+            <div class="likeImage" onclick="addToFav(event)">
+                <span class="material-symbols-rounded" id="like_button">favorite</span>
+            </div>
+            <div class="playlistImage">
+                <span class="material-symbols-rounded" id="add_button">add</span>
+            </div>
+        </div>
+        <!-- music player controller -->
+        <div class="music_controller">
+            <!-- control buttons -->
+            <div class="control-btn">
+                <span class="material-symbols-rounded" id="repeat" title="Repeat">repeat</span>
+                <span class="material-symbols-rounded" id="prev" title="Previous">skip_previous</span>
+                <div class="play-pause">
+                    <span class="material-symbols-rounded" title="Play" id="play">play_circle</span>
+                </div>
+                <span class="material-symbols-rounded" title="Next" id="next">skip_next</span>
+                <span class="material-symbols-rounded" title="Shuffle" id="shuffle">shuffle</span>
+            </div>
+            <!-- displaying the progress bar and time of the track -->
+            <div class="progress-details">
+                <div class="progress-bar">
+                    <span></span>
+                </div>
+                <div class="time">
+                    <span class="current">0:00</span>
+                    <span class="final">3:30</span>
+                </div>
+            </div>
+        </div>
+        <!-- volume button -->
+        <div class="volume_button">
+            <span class="material-symbols-rounded" id="volume">volume_up</span>
+        </div>
+        <!-- volume bar -->
+        <div class="volume-details"> 
+            <div class="volume-bar">
+                <span></span>
+            </div>  
+        </div>
+        <audio src="" class="current-song"></audio>
+
+    </div>
+    
+    <!-- javascirpt for audio controls -->
+    <script src="js/playlist.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

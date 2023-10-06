@@ -1,0 +1,485 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    height:90vh;
+    overflow-y:hidden;
+    background-color: #262525;
+}
+.mainContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;  
+}
+/* style for side nav bar */
+.sideNavBar{
+    width: 20%;
+    height: 90vh;
+    background-color: #1e1c1c;
+    color:#fff;
+}
+/* styling the link side nav bar */
+.sideNavBar ul{
+    display: flex;
+    flex-direction: column;
+    font-weight: 550;
+    padding:10px;
+}
+.sideNavBar ul div {
+    padding: 10px;
+}
+/* navigation links styling */
+.nav-link{
+    display:flex;
+}
+.nav-link img{
+    width:20px;
+    object-fit:contain; /* to preserve image quality*/
+    margin-right: 5px;
+}
+
+/* logo css */
+.logo{
+    margin-bottom: 30px;
+}
+
+.separator{
+    margin-bottom:10px;
+    opacity:0.5;
+}
+a{
+    text-decoration: none;
+    line-height: 1.7;
+    font-size: 300;
+    color: white;
+    cursor: pointer;
+}
+.nav-item{
+    max-height: 450px;
+    overflow-y: scroll;
+    margin-bottom:75%;
+}
+.last-item {
+    color:#979191;   
+}
+
+
+/* main navigation with search box and profile information */
+.mainNavBar{
+    display: flex;
+    justify-content: space-between;
+    padding:0px 10px;
+    height:10vh;
+    background-color:#262525;
+}
+
+/* search box and profile box */
+.searchBox, .profileBox{
+    width: 45%;
+    height: 30px;
+    margin-top:20px;
+    text-align: center;
+}
+/* input box */
+.searchBox input{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    min-height: 20px;
+    font-size: 0.875rem;
+    font-weight: 550;
+    padding:10px 17px;
+    min-width: 300px;
+}
+
+/* register button styling */
+.profileBox{
+    text-align:right;
+    margin:20px;
+}
+/* register button */
+.register {
+    padding: 1em;
+    background: hsl(233deg 36% 38%);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor:pointer;
+}
+/* contentbox */
+.contentBox{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+}
+/* browse styling */
+.mainContent{
+    margin:20px;
+    overflow-y:scroll;
+}
+/* content header */
+.contentHeader{
+    margin: 0px 0px 20px 20px;
+}
+/* files of the page */
+.files{
+    display:flex;
+    width:100%;
+    flex-wrap:wrap;
+    align-content: flex-start;
+    margin:15px auto;
+}
+/* album */
+.album{
+    display:flex;
+    font-weight:550;
+    min-width:370px;
+    background-color:#303039;
+    height:60px;
+    margin:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* content album img */
+.album img{
+    width:20%;
+    height:100%;
+    object-fit:cover;
+    border-radius:5px 0px 0px 5px;
+}
+
+/* artist name */
+.album .artist{
+    width:80%;
+    margin:22px auto;
+    text-align:center;
+}
+
+/* more albums settings */
+.records{
+    text-align: center;
+    width:185px;
+    height:250px;
+    background-color:#303039;
+    margin:15px;
+    border-radius:5px;
+    padding:10px;
+    font-weight:600;
+}
+.records p {
+    margin-top:10px;   
+}
+.records p:last-child{
+    font-weight:400;
+    color:#7d7171;
+}
+.records img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    padding:10px;
+    border-radius:50%;
+}
+
+/* scroll bar setting */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:#474749;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4b4b78; 
+} 
+
+
+
+
+/* music player container */
+.musicContainer{
+    position:sticky;
+    display: flex;
+    color:white;
+    width: 100%;
+    bottom:0px;
+    height:12vh;
+    background:#262525;
+    border-top:1px solid #302f2f;
+    align-items: center;
+}
+
+.material-symbols-rounded{
+    cursor: pointer;
+}
+.imageWrapper{
+    margin:20px 15px 20px;
+}
+.music_image{
+    height:60px;
+    width:60px;
+}
+.music_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.music_details{
+    font-size:13px;
+    overflow: hidden;
+}
+.music_title{
+    font-weight:550;
+    white-space: nowrap;
+    width: 15em;
+}
+.artist_name{
+    color:grey;
+    white-space: nowrap;
+    width: 15em;
+}
+
+.addToList{
+    display:flex;
+    margin:30px;
+}
+.likeImage, .playlistImage{
+    height:20px;
+    width:30px;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+.addToList span:hover{
+    opacity:.5;
+}
+.progress-details{
+    height:3px;
+    width:100%;
+    background:#fff;
+    border-radius:10px;
+    cursor: pointer;
+}
+.progress-bar{
+    width:50%;
+    height:inherit;
+    border-radius:inherit;
+    background:#3e3e3e;
+    cursor:pointer;
+    position:relative;
+}
+.progress-bar span{
+    width:8px;
+    height:8px;
+    border-radius:inherit;
+    background:#3e3e3e;
+    position:absolute;
+    transform:translateY(-25%);
+    right:-5px;
+    opacity:0;
+    transition:opacity 0.3s ease-out;
+}
+.progress-details:hover .progress-bar span{
+    opacity:1;
+}
+/* time */
+.time{
+    display:flex;
+    margin-top:2px;
+    font-size:13px;
+    align-items:center;
+    justify-content:space-between;
+    color:#ddd;
+}
+/* control buttons */
+.music_controller{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.control-btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:-15px;
+    margin-bottom:10px;
+}
+.control-btn span{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:#333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0px 6px;
+}
+#play{
+    background:none;
+    width:45px;
+    height:45px;
+    font-size:50px;
+}
+.control-btn span:hover{
+    opacity:0.5;
+}
+/* volume css */
+.volume_button{
+    width:20px;
+    height:20px;
+    cursor:pointer;
+    margin:0px 10px 0px 20px;
+}
+.volume_button:hover{
+    opacity:0.5;
+}
+.volume-details{
+    width:10%;
+    height:3px;
+    margin-top:5px;
+    margin-right:20px;
+    background:#fff;
+    border-radius:10px;
+    cursor: pointer;
+}
+.volume-bar{
+    width:50%;
+    height:inherit;
+    border-radius:inherit;
+    background:#3e3e3e;
+    cursor:pointer;
+    position:relative;
+}
+.volume-bar span{
+    width:7px;
+    height:7px;
+    border-radius:inherit;
+    background:#3e3e3e;
+    position:absolute;
+    transform:translateY(-25%);
+    right:-5px;
+    opacity:0;
+    transition:opacity 0.3s ease-out;
+}
+.volume-details:hover .volume-bar span{
+    opacity:1;
+}
+
+
+/* favorite list css */
+.wrapper{
+    width:95%;
+    margin: 10px auto;
+}
+.favHeader{
+    display:flex;
+    width:100%;
+    margin:10px auto;
+}
+.headFirst{
+    flex:1;
+}
+.headFirst span{
+    margin-right:10px;
+}
+.headLast{
+    width:20px;
+    height:20px;
+}
+.headLast img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+.wrapper hr{
+    opacity:0.3;
+}
+.listContainer{
+    padding: 5px;
+}
+#list {
+    display:flex;
+    width:100%;
+    border-radius:3px;
+    height:30px;
+    padding:15px 0px;
+    margin:10px auto;
+}
+#list:hover{
+     background:#5f5b5b;
+}
+.listTitle{
+    flex:1;
+    display:flex;
+}
+.titleWrapper{
+    margin:0px 10px;
+}
+.title_image{
+    width:40px;
+    height:40px;
+    margin-top:-5px
+}
+.title_image img{
+    width:100%;
+    height:100%;
+    border-radius:3px;
+    object-fit:cover;
+}
+.feature{
+    display:flex;
+    text-align:right;
+}
+
+/* hover effect */
+.register:hover, a:hover, .album:hover{
+    color:#3aa122;
+    transition:0.10s;
+    transform:scale(1.009);
+}
+.records:hover{
+    color:#3aa122;
+    transition:0.10s;
+    cursor:pointer;
+    transform:scale(1.009);
+    background-color:#36364087;    
+}
+
+/* using to show to display on click function */
+.hide{
+    display: none;
+}
+
+
+/* when album is clicked display this */
+.albumImage{
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    text-align: center;
+}
+.albumImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.albumDetails{
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: 700;
+}
