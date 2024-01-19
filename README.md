@@ -7,11 +7,11 @@ This application consists of main section of page that displays the current cont
 <details open>
 <summary><h2>📷 Some screenshots of the application</h2></summary>
 <h3>main section</h3>
-![Main section](https://github.com/SalonTamang/salon_player/blob/]main/main.png?raw=true)
+![Main section](https://github.com/SalonTamang/salon_player/blob/main/main.png?raw=true)
 <h3>popular section</h3>
-![Popular section](https://github.com/SalonTamang/salon_player/blob/]main/popular.png?raw=true)
+![Popular section](https://github.com/SalonTamang/salon_player/blob/main/popular.png?raw=true)
 <h3>Now playing</h3>
-![Music playing](https://github.com/SalonTamang/salon_player/blob/]main/now.png?raw=true)
+![Music playing](https://github.com/SalonTamang/salon_player/blob/main/now.png?raw=true)
 </details>
 
 
